@@ -8,7 +8,8 @@
 
 $(function(){
   // #で始まるa要素をクリックした場合に処理（"#"←ダブルクォーテンションで囲むのを忘れずに。忘れるとjQueryのバージョンによっては動かない。。）
-  $('#page-top').click(function(){
+  if (window.matchMedia('(max-width: 576px)').matches) {
+    $('#page-top').click(function(){
     // 移動先を0px調整する。0を30にすると30px下にずらすことができる。
     var adjust = 0;
     // スクロールの速度（ミリ秒）
@@ -22,6 +23,7 @@ $(function(){
     // スムーススクロール linear（等速） or swing（変速）
     $('body,html').animate({scrollTop:position}, speed, 'swing');
     return false;
-  });
+    });
+  }
 });
 
