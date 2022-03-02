@@ -17,7 +17,7 @@ $(function(){
     // アンカーの値取得 リンク先（href）を取得して、hrefという変数に代入
     var href= $(this).attr("href");
     // 移動先を取得 リンク先(href）のidがある要素を探して、targetに代入
-    var target = $('#page-top');
+    var target = $(this);
     // 移動先を調整 idの要素の位置をoffset()で取得して、positionに代入
     var position = target.offset().top + adjust;
     // スムーススクロール linear（等速） or swing（変速）
