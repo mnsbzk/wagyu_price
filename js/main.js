@@ -19,7 +19,7 @@ $(function(){
     // 移動先を取得 リンク先(href）のidがある要素を探して、targetに代入
     var target = $(this);
     // 移動先を調整 idの要素の位置をoffset()で取得して、positionに代入
-    var position = target.offset().top + adjust;
+    var position = 0;
     // スムーススクロール linear（等速） or swing（変速）
     $('body,html').animate({scrollTop:position}, speed, 'swing');
     return false;
