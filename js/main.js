@@ -23,6 +23,7 @@ $(function(){
     // スムーススクロール linear（等速） or swing（変速）
     $('body,html').animate({scrollTop:position}, speed, 'swing');
     return false;
+    console.log(123)
     });
   }
 });
